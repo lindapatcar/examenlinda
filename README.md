@@ -13,7 +13,7 @@ He dicho en ocasiones anteriores que esta manteria ha sido un camino complejo y 
  * Python
  
 ```
-__ Mi mayor ayudante me ha dicho estar orgulloso de mis habilidades_
+   Mi mayor ayudante me ha dicho estar orgulloso de mis habilidades
 
 ```
 > "Creo que te irá bien en el examen, es importante frustrarte y resolver"
