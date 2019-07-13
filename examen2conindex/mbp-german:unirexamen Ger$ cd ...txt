@@ -1,0 +1,410 @@
+mbp-german:unirexamen Ger$ cd ..
+mbp-german:Desktop Ger$ cd unirexamen
+mbp-german:unirexamen Ger$ git init
+Inicializado repositorio Git vacío en /Users/Ger/Desktop/unirexamen/.git/
+mbp-german:unirexamen Ger$ cd ~/.ssh/
+mbp-german:.ssh Ger$ ssh-keygen -t rsa -b 4096 -C "lindapatcar@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/Ger/.ssh/id_rsa): llaveexamen
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in llaveexamen.
+Your public key has been saved in llaveexamen.pub.
+The key fingerprint is:
+SHA256:YEDdRx3bXO4Bsfk7sbTQS2OmcIdv/s+bJzGMVuwr0+U lindapatcar@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|   .o. . ....+. .|
+|     .. . . .++o |
+|      o  .  .+o..|
+|     . .      *..|
+|        S  . O @.|
+|            = # O|
+|           . o # |
+|            o *.E|
+|             o =O|
++----[SHA256]-----+
+mbp-german:.ssh Ger$ eval "$(ssh-agent -s)"
+Agent pid 8625
+mbp-german:.ssh Ger$ ssh-add ~/.ssh/llaveexamen
+Identity added: /Users/Ger/.ssh/llaveexamen (/Users/Ger/.ssh/llaveexamen)
+mbp-german:.ssh Ger$ open . llaveexamen.pub
+mbp-german:.ssh Ger$ open . llaveexamen.pub
+mbp-german:.ssh Ger$ cd /Users/Ger/Desktop/unirexamen
+mbp-german:unirexamen Ger$ git clone git@github.com:lindapatcar/examenlinda.git
+Clonando en 'examenlinda'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Recibiendo objetos: 100% (3/3), listo.
+mbp-german:unirexamen Ger$ ls
+examenlinda
+mbp-german:unirexamen Ger$ cd examenlinda
+mbp-german:examenlinda Ger$ ls
+README.md
+mbp-german:examenlinda Ger$ echo "Hola Mundo" > README.md
+mbp-german:examenlinda Ger$ cat README.md
+Hola Mundo
+mbp-german:examenlinda Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git checkout -- <archivo>..." para descartar los cambios en el directorio de trabajo)
+
+	modificado:     README.md
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+mbp-german:examenlinda Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git checkout -- <archivo>..." para descartar los cambios en el directorio de trabajo)
+
+	modificado:     README.md
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+mbp-german:examenlinda Ger$ git add --all
+mbp-german:examenlinda Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+Cambios a ser confirmados:
+  (usa "git reset HEAD <archivo>..." para sacar del área de stage)
+
+	modificado:     README.md
+
+mbp-german:examenlinda Ger$ git commit -m "README actualizado"
+[master 1cb95c5] README actualizado
+ 1 file changed, 29 insertions(+), 1 deletion(-)
+ rewrite README.md (100%)
+mbp-german:examenlinda Ger$ git push origin master
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 4 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (3/3), 765 bytes | 765.00 KiB/s, listo.
+Total 3 (delta 0), reusado 0 (delta 0)
+To github.com:lindapatcar/examenlinda.git
+   7a84a92..1cb95c5  master -> master
+mbp-german:examenlinda Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+nada para hacer commit, el árbol de trabajo está limpio
+mbp-german:examenlinda Ger$ ls
+README.md
+mbp-german:examenlinda Ger$ mkdir textos para examen
+mbp-german:examenlinda Ger$ ls
+README.md	examen		para		textos
+mbp-german:examenlinda Ger$ rm textos para examen
+rm: textos: is a directory
+rm: para: is a directory
+rm: examen: is a directory
+mbp-german:examenlinda Ger$ echo "Textosparaexamen" > textos
+-bash: textos: Is a directory
+mbp-german:examenlinda Ger$ git rm examen para
+fatal: ruta especificada 'examen' no concordó con ninguna carpeta
+mbp-german:examenlinda Ger$ ls
+README.md	examen		para		textos
+mbp-german:examenlinda Ger$ rm dir para textos
+rm: dir: No such file or directory
+rm: para: is a directory
+rm: textos: is a directory
+mbp-german:examenlinda Ger$ rmdir para textos
+mbp-german:examenlinda Ger$ ls
+README.md	examen
+mbp-german:examenlinda Ger$ cd examen
+mbp-german:examen Ger$ touch Perfil.txt
+mbp-german:examen Ger$ ls
+Perfil.txt
+mbp-german:examen Ger$ echo "Mi nombre es Linda Patiño, tengo 25 años y soy periodista de Tecnología en el periódico colombiano El Tiempo. ## Sobre el master  Elegí el presente master porque deseo conocer más sobre el **mundo de los datos**" > Perfil.txt
+mbp-german:examen Ger$ cat Perfil.txt
+Mi nombre es Linda Patiño, tengo 25 años y soy periodista de Tecnología en el periódico colombiano El Tiempo. ## Sobre el master  Elegí el presente master porque deseo conocer más sobre el **mundo de los datos**
+mbp-german:examen Ger$ cd ..
+mbp-german:examenlinda Ger$ ls
+README.md	examen
+mbp-german:examenlinda Ger$ cd examen
+mbp-german:examen Ger$ ls
+Perfil.txt
+mbp-german:examen Ger$ mkdir Podcast Notas 
+mbp-german:examen Ger$ ls
+Notas		Perfil.txt	Podcast
+mbp-german:examen Ger$ cd Podcast
+mbp-german:Podcast Ger$ touch linksapodcast.html
+mbp-german:Podcast Ger$ ls
+linksapodcast.html
+mbp-german:Podcast Ger$ cd ..
+mbp-german:examen Ger$ ls
+Notas		Perfil.txt	Podcast
+mbp-german:examen Ger$ cd Notas
+mbp-german:Notas Ger$ ls
+mbp-german:Notas Ger$ ls
+mbp-german:Notas Ger$ touch notasdelinda.txt
+mbp-german:Notas Ger$ ls
+notasdelinda.txt
+mbp-german:Notas Ger$ cd ..
+mbp-german:examen Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	./
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+mbp-german:examen Ger$ git add Podcast
+mbp-german:examen Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+Cambios a ser confirmados:
+  (usa "git reset HEAD <archivo>..." para sacar del área de stage)
+
+	nuevo archivo:  Podcast/homep.html
+	nuevo archivo:  Podcast/linksapodcast.html
+	nuevo archivo:  Podcast/sobremi.html
+	nuevo archivo:  Podcast/styles.css
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	Notas/
+	Perfil.txt
+
+mbp-german:examen Ger$ git commit -m "archivos de página y podcast"
+[master 6987f4d] archivos de página y podcast
+ 4 files changed, 228 insertions(+)
+ create mode 100644 examen/Podcast/homep.html
+ create mode 100644 examen/Podcast/linksapodcast.html
+ create mode 100644 examen/Podcast/sobremi.html
+ create mode 100644 examen/Podcast/styles.css
+mbp-german:examen Ger$ git push origin master
+Warning: Permanently added the RSA host key for IP address '140.82.113.3' to the list of known hosts.
+Enumerando objetos: 9, listo.
+Contando objetos: 100% (9/9), listo.
+Compresión delta usando hasta 4 hilos
+Comprimiendo objetos: 100% (7/7), listo.
+Escribiendo objetos: 100% (8/8), 4.20 KiB | 4.20 MiB/s, listo.
+Total 8 (delta 0), reusado 0 (delta 0)
+To github.com:lindapatcar/examenlinda.git
+   1cb95c5..6987f4d  master -> master
+mbp-german:examen Ger$ cd Notas
+mbp-german:Notas Ger$ ls
+notasdelinda.txt
+mbp-german:Notas Ger$ open . notasdelinda.txt
+mbp-german:Notas Ger$ ls
+notasdelinda.txt	styles.css
+mbp-german:Notas Ger$ cd ..
+mbp-german:examen Ger$ ls
+Notas		Perfil.txt	Podcast
+mbp-german:examen Ger$ git add Notas
+mbp-german:examen Ger$ ls
+Notas		Perfil.txt	Podcast
+mbp-german:examen Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+Cambios a ser confirmados:
+  (usa "git reset HEAD <archivo>..." para sacar del área de stage)
+
+	nuevo archivo:  Notas/notasdelinda.txt
+	nuevo archivo:  Notas/styles.css
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	Perfil.txt
+
+mbp-german:examen Ger$ git commit -m "archivos de notas"
+[master 11a35df] archivos de notas
+ 2 files changed, 98 insertions(+)
+ create mode 100644 examen/Notas/notasdelinda.txt
+ create mode 100644 examen/Notas/styles.css
+mbp-german:examen Ger$ git push origin master
+Enumerando objetos: 7, listo.
+Contando objetos: 100% (7/7), listo.
+Compresión delta usando hasta 4 hilos
+Comprimiendo objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (5/5), 1.02 KiB | 1.02 MiB/s, listo.
+Total 5 (delta 0), reusado 0 (delta 0)
+To github.com:lindapatcar/examenlinda.git
+   6987f4d..11a35df  master -> master
+mbp-german:examen Ger$ git pull origin master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Desempaquetando objetos: 100% (6/6), listo.
+Desde github.com:lindapatcar/examenlinda
+ * branch            master     -> FETCH_HEAD
+   11a35df..0d5bf9f  master     -> origin/master
+Actualizando 11a35df..0d5bf9f
+Fast-forward
+ README.md | 35 ++++++++++++++++++++---------------
+ 1 file changed, 20 insertions(+), 15 deletions(-)
+mbp-german:examen Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	Perfil.txt
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+mbp-german:examen Ger$ git add --all
+mbp-german:examen Ger$ git status
+En la rama master
+Tu rama está actualizada con 'origin/master'.
+
+Cambios a ser confirmados:
+  (usa "git reset HEAD <archivo>..." para sacar del área de stage)
+
+	nuevo archivo:  Perfil.txt
+
+mbp-german:examen Ger$ git commit -m "realizando subidas de archivo perfil"
+[master 67e4c45] realizando subidas de archivo perfil
+ 1 file changed, 1 insertion(+)
+ create mode 100644 examen/Perfil.txt
+mbp-german:examen Ger$ git pudh origin master
+git: 'pudh'no es un comando de git. Mira 'git --help'.
+
+El comando mas similar es
+	push
+mbp-german:examen Ger$ git push origin master
+Enumerando objetos: 6, listo.
+Contando objetos: 100% (6/6), listo.
+Compresión delta usando hasta 4 hilos
+Comprimiendo objetos: 100% (4/4), listo.
+Escribiendo objetos: 100% (4/4), 561 bytes | 561.00 KiB/s, listo.
+Total 4 (delta 0), reusado 0 (delta 0)
+To github.com:lindapatcar/examenlinda.git
+   0d5bf9f..67e4c45  master -> master
+mbp-german:examen Ger$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Desempaquetando objetos: 100% (3/3), listo.
+Desde github.com:lindapatcar/examenlinda
+ * branch            master     -> FETCH_HEAD
+   67e4c45..698823c  master     -> origin/master
+Actualizando 67e4c45..698823c
+Fast-forward
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+mbp-german:examen Ger$ mkdir testbranch
+mbp-german:examen Ger$ ls
+Notas		Perfil.txt	Podcast		testbranch
+mbp-german:examen Ger$ git branch ramita
+mbp-german:examen Ger$ git checkout ramita
+Cambiado a rama 'ramita'
+mbp-german:examen Ger$ cd testbranch
+mbp-german:testbranch Ger$ touch test.cvs
+mbp-german:testbranch Ger$ ls
+test.cvs
+mbp-german:testbranch Ger$ rm test.cvs
+mbp-german:testbranch Ger$ ls
+mbp-german:testbranch Ger$ touch test.csv
+mbp-german:testbranch Ger$ ls
+test.csv
+mbp-german:testbranch Ger$ git add test.csv
+mbp-german:testbranch Ger$ git status
+En la rama ramita
+Cambios a ser confirmados:
+  (usa "git reset HEAD <archivo>..." para sacar del área de stage)
+
+	nuevo archivo:  test.csv
+
+mbp-german:testbranch Ger$ git commit -m "añade archivo de test a la branch ramita"
+[ramita e15c97b] añade archivo de test a la branch ramita
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 examen/testbranch/test.csv
+mbp-german:testbranch Ger$ git push origin master
+Everything up-to-date
+mbp-german:testbranch Ger$ git push origin ramita
+Enumerando objetos: 7, listo.
+Contando objetos: 100% (7/7), listo.
+Compresión delta usando hasta 4 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (5/5), 411 bytes | 411.00 KiB/s, listo.
+Total 5 (delta 1), reusado 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ramita' on GitHub by visiting:
+remote:      https://github.com/lindapatcar/examenlinda/pull/new/ramita
+remote: 
+To github.com:lindapatcar/examenlinda.git
+ * [new branch]      ramita -> ramita
+mbp-german:testbranch Ger$ git checkeout master
+git: 'checkeout'no es un comando de git. Mira 'git --help'.
+
+El comando mas similar es
+	checkout
+mbp-german:testbranch Ger$ git checkout master
+Cambiado a rama 'master'
+Tu rama está actualizada con 'origin/master'.
+mbp-german:testbranch Ger$ git log -p
+fatal: Incapaz de leer el directorio de trabajo actual: No such file or directory
+mbp-german:testbranch Ger$ cd ..
+mbp-german:examen Ger$ git log -p
+commit 698823c7ee9f2168c7f45c1d64906fff49e8d8fa (HEAD -> master, origin/master, origin/HEAD)
+Author: Linda Patiño <51392607+lindapatcar@users.noreply.github.com>
+Date:   Sat Jul 13 14:21:06 2019 -0500
+
+    Update README.md
+    
+    cambio en linea de cita
+
+diff --git a/README.md b/README.md
+index 79f1383..c79c078 100644
+--- a/README.md
++++ b/README.md
+@@ -13,7 +13,7 @@ He dicho en ocasiones anteriores que esta manteria ha sido un camino complejo y
+  * Python
+  
+ ```
+-__ Mi mayor ayudante me ha dicho estar orgulloso de mis habilidades_
++   Mi mayor ayudante me ha dicho estar orgulloso de mis habilidades
+ 
+ ```
+ > "Creo que te irá bien en el examen, es importante frustrarte y resolver"
+
+commit 67e4c45e5b7c8822498b527056e141b319dfbcb1
+Author: lindapatcar <lindapatcar@gmail.com>
+Date:   Sat Jul 13 14:20:15 2019 -0500
+
+    realizando subidas de archivo perfil
+
+diff --git a/examen/Perfil.txt b/examen/Perfil.txt
+new file mode 100644
+index 0000000..7a240c7
+--- /dev/null
++++ b/examen/Perfil.txt
+@@ -0,0 +1 @@
++Mi nombre es Linda Patiño, tengo 25 años y soy periodista de Tecnología en el periódico colombiano El Tiempo. ## Sobre el master  Elegí el presente master porque deseo conocer más sobre el **mundo de los datos**
+
+commit 0d5bf9faf5a3cda41fa1e800896bb2de525d8885
+Author: Linda Patiño <51392607+lindapatcar@users.noreply.github.com>
+Date:   Sat Jul 13 14:18:59 2019 -0500
+
+    Update README.md
+    
+    Cambio en el README para agregar perfiles de contacto
+
+diff --git a/README.md b/README.md
+index e068904..79f1383 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # TestExamen
+-============
+-_Como parte de un ejercicio de introducción a Git he creado este repositorio y una gitpage_. 
++
++ _Como parte de un ejercicio de introducción a Git he creado este repositorio y una gitpage_. 
+:
