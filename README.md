@@ -1,6 +1,6 @@
 # TestExamen
-============
-_Como parte de un ejercicio de introducción a Git he creado este repositorio y una gitpage_. 
+
+ _Como parte de un ejercicio de introducción a Git he creado este repositorio y una gitpage_. 
  En esta ocasión no he utilizado una plantilla previa de _Markdown_
 ## Lecciones aprendidas:  
 
@@ -19,8 +19,7 @@ __ Mi mayor ayudante me ha dicho estar orgulloso de mis habilidades_
 > "Creo que te irá bien en el examen, es importante frustrarte y resolver"
 >
 
-# TestExamen
------------------
+## Hora de despedirme: 
 
  Me encantaría que después de que acabe el master sigamos en contacto estimado Luis, especialmente para conocer tus opiniones después de que se publique el TFM. Puedes agregarme en estos perfiles: 
  
